@@ -171,10 +171,10 @@ class ClientScreen extends Component {
                                                 <td>{client.client_city}</td>
                                                 <td>{client.client_postal}</td>
                                                 <td className="myclase">
-                                                    <button className="btn btn-primary btn-xs pull-left" onClick={() => this.openModal(client)}>
+                                                    <button title="Editar Cliente" className="btn btn-primary btn-xs pull-left" onClick={() => this.openModal(client)}>
                                                             <i class="fas fa-pencil-alt" aria-hidden="true"></i> 
                                                     </button>
-                                                    <button className="btn btn-danger btn-xs pull-left" onClick={() => this.props.removeClient(client.client_id)}>
+                                                    <button title="Eliminar Cliente" className="btn btn-danger btn-xs pull-left" onClick={() => this.props.removeClient(client.client_id)}>
                                                             <i class="fas fa-trash-alt" aria-hidden="true"></i> 
                                                     </button> 
                                                 </td> 

@@ -124,8 +124,8 @@ class SalesList extends Component {
                                     <td>{formatCurrency(sale.sale_total)}</td>
                                     <td>{formatCurrency(sale.iva)}</td>
                                     <td>
-                                        <button className="btn-success btn" onClick={() => this.openModal(sale.sale_id)}><i className="fas fa-search-dollar"></i></button>
-                                        <button className="btn-primary btn" onClick={() => alert("re imprimir ticket")}><i className="fas fa-print"></i></button>
+                                        <button title="Ver detalle" className="btn-success btn" onClick={() => this.openModal(sale.sale_id)}><i className="fas fa-search-dollar"></i></button>
+                                        <button title="Re imprimir ticket" className="btn-primary btn" onClick={() => alert("re imprimir ticket")}><i className="fas fa-print"></i></button>
                                     </td>
                                 </tr>
                             ))}

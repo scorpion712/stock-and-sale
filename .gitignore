@@ -22,7 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-backend/connection.js
 node_modules
 data.js
 .env

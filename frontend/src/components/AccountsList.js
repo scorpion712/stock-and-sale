@@ -129,9 +129,9 @@ class AccountsList extends Component {
                                 <td>{account.sale_total}</td>
                                 <td>{-(Number(account.sale_total) - Number(account.delivered))}</td>
                                 <td>
-                                    <button className="btn-success btn" onClick={() => this.openModal(account.sale_id, MODAL_DETAIL, account)}><i className="fas fa-search-dollar"></i></button>
-                                    <button className="btn-primary btn" onClick={() => alert("re imprimir ticket")}><i className="fas fa-print"></i></button>
-                                    <button className="btn-warning btn" onClick={() => this.openModal(account.sale_id, MODAL_PAYOFF, account)}><i class="fas fa-hand-holding-usd"></i></button>
+                                    <button title="Ver detalle" className="btn-success btn" onClick={() => this.openModal(account.sale_id, MODAL_DETAIL, account)}><i className="fas fa-search-dollar"></i></button>
+                                    <button title="Reimprimir ticket" className="btn-primary btn" onClick={() => alert("re imprimir ticket")}><i className="fas fa-print"></i></button>
+                                    <button title="Saldar cuenta" className="btn-warning btn" onClick={() => this.openModal(account.sale_id, MODAL_PAYOFF, account)}><i class="fas fa-hand-holding-usd"></i></button>
                                 </td>
                             </tr>
                         ))

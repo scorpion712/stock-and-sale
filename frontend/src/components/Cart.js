@@ -74,8 +74,8 @@ class Cart extends Component {
                                             <div>{item.product_description}</div>
                                             <div className="right">
                                                 {formatCurrency(item.product_price)} x {item.count} {" "}
-                                                <button className="btn-lg btn-info" onClick={() => {this.props.removeFromCart(item)}}><i class="fas fa-minus-circle"></i></button>
-                                                <button className="btn-lg btn-danger" onClick={() => { this.props.removeFromCartId(item)}}><i class="fas fa-trash-alt"></i></button>
+                                                <button title="Quitar 1 unidad" className="btn-lg btn-info" onClick={() => {this.props.removeFromCart(item)}}><i class="fas fa-minus-circle"></i></button>
+                                                <button title="Quitar artíulo/s" className="btn-lg btn-danger" onClick={() => { this.props.removeFromCartId(item)}}><i class="fas fa-trash-alt"></i></button>
                                             </div>
                                         </div>
                                     </li>

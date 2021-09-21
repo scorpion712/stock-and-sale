@@ -110,6 +110,10 @@ class ProviderList extends Component {
         this.setState({open_modal: false, prov: null, open_modal_increase: false});
     }
  
+    handleDeleteProvider(provider) {
+        if (window.confirm('Eliminar al proveedor ' + provider.provider_name + ' eliminará todos sus artículos. Desea continuar?'))
+            this.props.deleteProvider(provider.provider_id);
+    }
 
     render() {
         const {open_modal, prov, open_modal_increase} = this.state;
@@ -141,13 +145,13 @@ class ProviderList extends Component {
                                         <td>{provider.provider_cuit}</td>
                                         <td>{provider.provider_postal}</td>
                                         <td className="myclase">
-                                            <button className="btn btn-primary btn-xs pull-left" onClick={() => this.openModal(provider,1)}>
+                                            <button title="Editar Proveedor" className="btn btn-primary btn-xs pull-left" onClick={() => this.openModal(provider,1)}>
                                                     <i className="fas fa-pencil-alt" aria-hidden="true"></i> 
                                             </button>
-                                            <button className="btn btn-danger btn-xs pull-left" onClick={() => this.props.deleteProvider(provider.provider_id)}>
+                                            <button title="Eliminar Proveedor" className="btn btn-danger btn-xs pull-left" onClick={() => this.handleDeleteProvider(provider)}>
                                                     <i className="fas fa-trash-alt" aria-hidden="true"></i> 
                                             </button> 
-                                            <button className="btn btn-success btn-xs pull-left" onClick={() => this.openModal(provider,2)}>
+                                            <button title="Aumento de Proveedor" className="btn btn-success btn-xs pull-left" onClick={() => this.openModal(provider,2)}>
                                                 <i className="fas fa-chart-line"></i> 
                                             </button> 
                                         </td> 

@@ -127,10 +127,10 @@ class ProductList extends Component {
                                                 <td>{formatCurrency(product.product_price)}</td>
                                                 <td>{product.product_iva+"%"}</td> 
                                                 <td className="myclase">
-                                                    <button className="btn btn-primary btn-xs pull-left" onClick={() => {this.openModal(product)} }>
+                                                    <button title="Editar artículo" className="btn btn-primary btn-xs pull-left" onClick={() => {this.openModal(product)} }>
                                                             <i className="fas fa-pencil-alt" aria-hidden="true"></i> 
                                                     </button>
-                                                    <button className="btn btn-danger btn-xs pull-left" onClick={() => {this.props.deleteProduct(product.product_code)} }>
+                                                    <button title="Eliminar artículo" className="btn btn-danger btn-xs pull-left" onClick={() => {this.props.deleteProduct(product.product_code)} }>
                                                             <i className="fas fa-trash-alt" aria-hidden="true"></i> 
                                                     </button> 
                                                 </td> 

@@ -128,7 +128,7 @@ class Product extends Component {
                                         <td>{formatCurrency(product.product_price)}</td>
                                         <td className="td-product-add"> 
                                             <input className="input-group-text product-count pull-left" defaultValue={this.state.adding_count} type="number" min="1" id={"adding_count" + product.product_code} onChange={this.onChange}/>
-                                            <button className="btn btn-success btn-xs pull-left" onClick={() => this.addToCart(product)}>
+                                            <button title="Agregar al carrito" className="btn btn-success btn-xs pull-left" onClick={() => this.addToCart(product)}>
                                                     <i className="fas fa-cart-plus" aria-hidden="true"></i> 
                                             </button>
                                         </td> 
