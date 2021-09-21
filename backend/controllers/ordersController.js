@@ -61,9 +61,10 @@ module.exports.fetchSales = async(req, res) => {
 // get sale detail by sale id
 module.exports.getSaleDetail = async(req, res) => {
     connection.query(
-        "SELECT DISTINCT s.sale_id, sale_date, sale_total, iva, client_name, client_category "+
-        "FROM bd_elruso.sales s JOIN bd_elruso.client c ON (s.client_id = c.client_id) LEFT JOIN bd_elruso.sales_no_fiscal nf ON (s.sale_id = nf.sale_id) "+
-        "WHERE payment NOT LIKE 'A' OR (payment LIKE 'A' and (s.sale_total - nf.delivered > 0))", 
+        "SELECT DISTINCT s.sale_id, s.sale_date, c.client_name, c.client_category, c.client_cuit, l.product_count, l.product_description, l.price, l.total, s.iva, s.sale_total "+
+        "FROM bd_elruso.sales s JOIN bd_elruso.client c ON (s.client_id = c.client_id) " +
+            "JOIN bd_elruso.sale_line l ON (s.sale_id = l.sale_id) "+
+        "WHERE s.sale_id = " + req.params.id, 
         function(err, rows) {
             if (err) throw err;
             res.send(JSON.stringify(rows));

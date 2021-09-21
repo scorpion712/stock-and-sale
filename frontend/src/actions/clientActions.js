@@ -27,8 +27,8 @@ export const fetchClients = () => async (dispatch) => {
 }; 
 
 export const editClient = (client) => async (dispatch) => {
-    fetch("/api/clients/edit/"+client.client_id, {
-        method: "POST",
+    fetch("/api/clients/"+client.client_id, {
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
