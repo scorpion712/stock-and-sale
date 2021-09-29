@@ -1,6 +1,6 @@
-# STOCK AND SALE FOR IRONMONGERY
+# STOCK AND SALE FOR HARDWARE STORE OR IRONMONGERY
 
-This project was developed to control sales in a inronmongery store. It was made with the idea that the system works in differents terminals located in different cities. This is actually in development.
+This project was developed to control sales in a inronmongery or hardware store. It was made with the idea that the system works in differents terminals located in different cities. This is actually in development.
 
 ## Getting Started 🚀
 
